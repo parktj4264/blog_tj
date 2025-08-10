@@ -4,26 +4,46 @@ project:
 website:
   title: "Taejun Park · Statistics & ML"
   site-url: "https://parktj4264.github.io/blog_tj"
+  description: "통계·AI·ML 연구노트 & 포트폴리오"
+  # favicon: assets/img/favicon.png
   navbar:
+    # logo: assets/img/logo.svg
     left:
       - text: "Home"
         href: index.qmd
-      - text: "About"
-        href: about.qmd
       - text: "Posts"
         href: posts/
+      - text: "About"
+        href: about.qmd
       - text: "Resume"
         href: resume.qmd
     right:
       - icon: github
-        href: https://github.com/parktj4264/blog_tj
+        href: "https://github.com/parktj4264/blog_tj"
+  page-footer:
+    left: "© 2025 Taejun Park"
+    right: "Built with Quarto · GitHub Pages"
+
+  # 검색 켜기
+  search: true
+
 format:
   html:
     theme: cosmo
-    css: styles.css
     toc: true
+    toc-depth: 3
+    number-sections: false
+    code-copy: true
     code-tools: true
-    code-fold: false
+    css: styles.css
+
+# 수식 넘버링
+include-in-header:
+  text: |
+    <script>
+      window.MathJax = { tex: { tags: 'all' } };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 execute:
-  freeze: auto  # only re-render changed docs
+  freeze: auto

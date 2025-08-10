@@ -1,11 +1,15 @@
 ---
 title: "Bayesian SPC: 베이지안 품질관리 개요"
-date: 2025-08-10
-categories: [bayesian, spc, manufacturing]
+date: 2025-08-11
+description: "공정 데이터에서 불확실성까지 다루는 품질관리 프레임"
+categories: [statistics, bayesian]
+tags: [bayesian spc, posterior, limit setting]
+# image: assets/img/bayes-spc.png      # 카드 썸네일(없으면 지워도 됨)
 format:
   html:
     toc: true
 ---
+
 
 ## Posterior
 

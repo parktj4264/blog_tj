@@ -1,8 +1,8 @@
 {
-  "hash": "68067c150c9387275f4d5cb14f69f73d",
+  "hash": "aea1e319dbbb8e021dfde1ef1bdd74a0",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Bayesian SPC: 베이지안 품질관리 개요\"\ndate: 2025-08-10\ncategories: [bayesian, spc, manufacturing]\nformat:\n  html:\n    toc: true\n---\n\n## Posterior\n\n수식은 LaTeX로 표기합니다:\n\n$$\np(\\theta \\mid y) \\propto p(y \\mid \\theta) p(\\theta).\n$$\n\n\n::: {.cell}\n\n```{.python .cell-code}\nimport numpy as np\nnp.random.seed(0)\ndata = np.random.normal(0, 1, 10)\nfloat(np.mean(data))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n0.7380231707288347\n```\n\n\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nset.seed(1)\nmean(rnorm(10))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 0.1322028\n```\n\n\n:::\n:::\n",
+    "markdown": "---\ntitle: \"Bayesian SPC: 베이지안 품질관리 개요\"\ndate: 2025-08-11\ndescription: \"공정 데이터에서 불확실성까지 다루는 품질관리 프레임\"\ncategories: [statistics, bayesian]\ntags: [bayesian spc, posterior, limit setting]\nimage: assets/img/bayes-spc.png      # 카드 썸네일(없으면 지워도 됨)\nformat:\n  html:\n    toc: true\n---\n\n\n## Posterior\n\n수식은 LaTeX로 표기합니다:\n\n$$\np(\\theta \\mid y) \\propto p(y \\mid \\theta) p(\\theta).\n$$\n\n\n::: {.cell}\n\n```{.python .cell-code}\nimport numpy as np\nnp.random.seed(0)\ndata = np.random.normal(0, 1, 10)\nfloat(np.mean(data))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n0.7380231707288347\n```\n\n\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nset.seed(1)\nmean(rnorm(10))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 0.1322028\n```\n\n\n:::\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

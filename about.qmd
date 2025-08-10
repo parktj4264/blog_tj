@@ -9,5 +9,5 @@ title: "About"
 - 학력: 수학/통계
 
 ### Contact
-- GitHub: <https://github.com/USERNAME>
-- Email: you@example.com
+- GitHub: <https://github.com/parktj4264>
+- Email: qkr4264@naver.com

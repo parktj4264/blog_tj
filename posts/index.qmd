@@ -3,9 +3,9 @@ title: "Posts"
 listing:
   contents: .
   sort: "date desc"
-  type: default   # table/card 둘 다 가능
+  type: default   # 기본형
   categories: true
-  feed: true
 ---
 
-여기는 글 모음 페이지입니다.
+
+연구/정리 글 모음.
