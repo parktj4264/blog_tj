@@ -1,0 +1,11 @@
+{
+  "editor.rulers": [
+    88
+  ],
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "markdown.preview.doubleClickToSwitchToEditor": false,
+  "markdown.validate.enabled": false,
+  "quarto.path": "quarto",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt"
+}

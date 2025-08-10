@@ -1,0 +1,15 @@
+{
+  "hash": "1e098c18996a8b8695fe0b2fa9d18b3a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Bayesian SPC: 베이지안 품질관리 개요\"\ndate: 2025-08-10\ncategories: [bayesian, spc, manufacturing]\nformat:\n  html:\n    toc: true\n---\n\n## Posterior\n\n수식은 LaTeX로 표기:\n\n$$\np(\\theta \\mid y) \\propto p(y \\mid \\theta) p(\\theta).\n$$\n\n\n::: {.cell}\n\n```{.python .cell-code}\nimport numpy as np\nnp.random.seed(0)\ndata = np.random.normal(0, 1, 10)\nfloat(np.mean(data))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n0.7380231707288347\n```\n\n\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nset.seed(1)\nmean(rnorm(10))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 0.1322028\n```\n\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

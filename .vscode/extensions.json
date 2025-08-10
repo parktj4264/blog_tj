@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "quarto.quarto",
+    "ms-python.python",
+    "ms-toolsai.jupyter",
+    "REditorSupport.r",
+    "yzhang.markdown-all-in-one",
+    "github.vscode-pull-request-github"
+  ]
+}

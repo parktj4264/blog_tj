@@ -1,0 +1,16 @@
+---
+title: "Resume"
+format: html
+---
+
+## Experience
+- 2024– : Samsung Electronics, Memory Division · Data Science/ML
+
+## Projects
+- Bayesian-HITL Tree for Interpretable Limit Learning
+- TDA-based anomaly detection on wafer maps
+
+## Education
+- BSc Mathematics, MSc Spatial Statistics
+
+> PDF 이력서도 함께 배포하려면 `format: pdf`로 렌더 옵션을 추가하세요.

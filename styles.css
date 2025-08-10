@@ -1,0 +1,5 @@
+/* Minimal tweaks */
+body { line-height: 1.6; }
+.navbar-brand { font-weight: 700; }
+.quarto-title-banner { border-bottom: 1px solid #eee; }
+code { font-size: 0.95em; }

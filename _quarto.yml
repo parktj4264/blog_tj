@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  title: "Taejun Park · Statistics & ML"
+  site-url: "https://USERNAME.github.io/REPO_NAME"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Posts"
+        href: posts/
+      - text: "Resume"
+        href: resume.qmd
+    right:
+      - icon: github
+        href: https://github.com/USERNAME/REPO_NAME
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-tools: true
+    code-fold: false
+
+execute:
+  freeze: auto  # only re-render changed docs

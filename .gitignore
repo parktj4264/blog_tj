@@ -1,0 +1,18 @@
+# Quarto
+_site/
+*.html
+*.pdf
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+
+# OS
+.DS_Store
+Thumbs.db
+/.quarto/

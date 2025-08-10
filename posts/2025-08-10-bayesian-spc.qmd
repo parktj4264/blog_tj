@@ -1,0 +1,28 @@
+---
+title: "Bayesian SPC: 베이지안 품질관리 개요"
+date: 2025-08-10
+categories: [bayesian, spc, manufacturing]
+format:
+  html:
+    toc: true
+---
+
+## Posterior
+
+수식은 LaTeX로 표기:
+
+$$
+p(\theta \mid y) \propto p(y \mid \theta) p(\theta).
+$$
+
+```{python}
+import numpy as np
+np.random.seed(0)
+data = np.random.normal(0, 1, 10)
+float(np.mean(data))
+```
+
+```{r}
+set.seed(1)
+mean(rnorm(10))
+```

@@ -1,0 +1,14 @@
+---
+title: "Home"
+page-layout: article
+---
+
+# Welcome
+
+여긴 **수학/통계/ML** 정리와 프로젝트를 모아두는 포트폴리오 공간입니다.
+
+- 글 목록은 [Posts](/posts/)에서 확인 가능
+- 코드/수식은 R, Python 모두 지원
+- 깃허브 저장소와 연결되어 재현 가능한 분석을 지향
+
+> 사이트는 [Quarto](https://quarto.org) + GitHub Pages로 빌드됩니다.

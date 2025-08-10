@@ -1,0 +1,13 @@
+---
+title: "About"
+---
+
+## Taejun Park
+
+- 삼성전자 메모리사업부 · 데이터 분석/ML
+- 관심사: Bayesian SPC, Interpretable ML, 제조 데이터 분석
+- 학력: 수학/통계
+
+### Contact
+- GitHub: <https://github.com/USERNAME>
+- Email: you@example.com
