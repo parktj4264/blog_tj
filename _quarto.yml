@@ -3,7 +3,7 @@ project:
 
 website:
   title: "Taejun Park · Statistics & ML"
-  site-url: "https://USERNAME.github.io/REPO_NAME"
+  site-url: "https://parktj4264.github.io/blog_tj"
   navbar:
     left:
       - text: "Home"
@@ -16,7 +16,7 @@ website:
         href: resume.qmd
     right:
       - icon: github
-        href: https://github.com/USERNAME/REPO_NAME
+        href: https://github.com/parktj4264/blog_tj
 format:
   html:
     theme: cosmo

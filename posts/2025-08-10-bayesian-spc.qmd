@@ -9,7 +9,7 @@ format:
 
 ## Posterior
 
-수식은 LaTeX로 표기:
+수식은 LaTeX로 표기합니다:
 
 $$
 p(\theta \mid y) \propto p(y \mid \theta) p(\theta).
