@@ -1,5 +1,47 @@
-/* Minimal tweaks */
-body { line-height: 1.6; }
-.navbar-brand { font-weight: 700; }
-.quarto-title-banner { border-bottom: 1px solid #eee; }
-code { font-size: 0.95em; }
+/* 타이포 & 레이아웃 */
+body {
+    line-height: 1.7;
+    font-size: 16.5px;
+}
+
+main.content {
+    max-width: 900px;
+}
+
+/* 제목 가독성 */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+
+/* 네비게이션 로고/타이틀 정렬 */
+.navbar-brand {
+    font-weight: 800;
+}
+
+/* 코드 블록 가독성 */
+pre code {
+    font-size: 0.95em;
+}
+
+.quarto-title-meta {
+    opacity: 0.8;
+}
+
+/* 카드형 listing 살짝 음영 */
+.quarto-listing .card {
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.quarto-listing .card:hover {
+    transform: translateY(-2px);
+    transition: 120ms;
+}
+
+/* 이미지 라운드 */
+img {
+    border-radius: 8px;
+}
