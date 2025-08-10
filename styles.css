@@ -45,3 +45,61 @@ pre code {
 img {
     border-radius: 8px;
 }
+
+
+/* 1) 부트스트랩 네비 높이/패딩을 변수로 강제 고정 (라이트/다크 동일) */
+.navbar {
+    --bs-navbar-padding-y: .45rem;
+    --bs-navbar-brand-padding-y: .25rem;
+    --bs-navbar-brand-font-size: 1.05rem;
+    --bs-nav-link-padding-y: .35rem;
+    min-height: 56px;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1.2;
+}
+
+.navbar-brand img {
+    height: 24px;
+    width: auto;
+}
+
+/* 2) 토글 라벨 폭을 고정해서 재배치 방지 */
+button.quarto-color-scheme-toggle {
+    display: inline-flex;
+    align-items: center;
+}
+
+button.quarto-color-scheme-toggle::after {
+    content: "Light";
+    display: inline-block;
+    width: 5ch;
+    /* ← 글자수 달라도 폭 고정 */
+    margin-left: 6px;
+    font-size: 0.9em;
+    opacity: .85;
+    text-align: left;
+}
+
+.quarto-dark button.quarto-color-scheme-toggle::after {
+    content: "Dark";
+}
+
+/* 3) 네비 항목 세로정렬 고정 */
+.navbar .navbar-collapse,
+.navbar .navbar-nav {
+    align-items: center;
+}
+
+html {
+    font-size: 100% !important;
+    /* 브라우저 기본 기준 */
+}
+
+body {
+    font-size: 1.03rem !important;
+}
