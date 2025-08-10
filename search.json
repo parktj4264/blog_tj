@@ -28,52 +28,143 @@
     "text": "Education\n\nBSc Mathematics, MSc Spatial Statistics\n\n\nPDF 이력서도 함께 배포하려면 format: pdf로 렌더 옵션을 추가하세요."
   },
   {
-    "objectID": "posts/2025-08-11-measure-theory.html",
-    "href": "posts/2025-08-11-measure-theory.html",
-    "title": "Measure Theory 입문",
+    "objectID": "posts/2025-08-10-이론-projection.html",
+    "href": "posts/2025-08-10-이론-projection.html",
+    "title": "Projection",
     "section": "",
-    "text": "여기 본문 시작!\n\n\n\n\n\n\nFigure 1: σ-대수 개념도"
+    "text": "이 문서는 선형회귀/통계에서 핵심이 되는 투영(Projection) 개념을 선형대수 관점에서 정리한다. 설계행렬 \\[X\\]가 만드는 열공간(모형이 표현할 수 있는 부분)과 그 직교보완(잔차공간), 그리고 투영행렬 \\[P\\]와 잔차행렬 \\[M = I - P\\]의 스펙트럼(고유값) 구조를 다룬다."
+  },
+  {
+    "objectID": "posts/2025-08-10-이론-projection.html#개요",
+    "href": "posts/2025-08-10-이론-projection.html#개요",
+    "title": "Projection",
+    "section": "",
+    "text": "이 문서는 선형회귀/통계에서 핵심이 되는 투영(Projection) 개념을 선형대수 관점에서 정리한다. 설계행렬 \\[X\\]가 만드는 열공간(모형이 표현할 수 있는 부분)과 그 직교보완(잔차공간), 그리고 투영행렬 \\[P\\]와 잔차행렬 \\[M = I - P\\]의 스펙트럼(고유값) 구조를 다룬다."
+  },
+  {
+    "objectID": "posts/2025-08-10-이론-projection.html#표기",
+    "href": "posts/2025-08-10-이론-projection.html#표기",
+    "title": "Projection",
+    "section": "표기",
+    "text": "표기\n\n\\[X \\in \\mathbb{R}^{n \\times p}\\]: 설계행렬, \\[\\operatorname{rank}(X) = r\\]\n\\[\\operatorname{Col}(X)\\]: \\[X\\]의 열공간\n\\[P = X(X^T X)^{-1}X^T\\] (\\[X\\] 풀열랭크 가정) 또는 일반적으로 \\[P = X X^+\\] (Moore–Penrose 유사역행렬)\n\\[M = I - P\\]\n\\[\\hat{y} = Py\\], \\[e = (I - P)y\\]\n\n설명된 부분: \\[\\hat{y} \\in \\operatorname{Col}(X)\\] 설명되지 않은 부분: \\[e \\in \\operatorname{Col}(X)^{\\perp}\\]"
+  },
+  {
+    "objectID": "posts/2025-08-10-이론-projection.html#직교분해-정리",
+    "href": "posts/2025-08-10-이론-projection.html#직교분해-정리",
+    "title": "Projection",
+    "section": "직교분해 정리",
+    "text": "직교분해 정리\n모든 \\[y \\in \\mathbb{R}^n\\]는 유일하게 \\[\ny = Py + (I - P)y = \\hat{y} + e, \\quad \\hat{y} \\in \\operatorname{Col}(X),\\ e \\in \\operatorname{Col}(X)^{\\perp}\n\\] 로 분해되고, \\[\nX^T e = 0\n\\] (정규방정식)이며, 이는 \\[\n\\min_{\\beta} \\|y - X\\beta\\|_2^2\n\\] 의 필요충분조건이다."
+  },
+  {
+    "objectID": "posts/2025-08-10-이론-projection.html#투영행렬의-성질-대칭멱등",
+    "href": "posts/2025-08-10-이론-projection.html#투영행렬의-성질-대칭멱등",
+    "title": "Projection",
+    "section": "투영행렬의 성질 (대칭·멱등)",
+    "text": "투영행렬의 성질 (대칭·멱등)\n\n\\[P^T = P,\\ P^2 = P\\]\n\\[M = I - P\\] 역시 대칭·멱등, \\[PM = MP = 0\\]\n\n스펙트럼 구조: 대칭·멱등이면 모든 고유값은 0 또는 1. \\[\\lambda = 1\\] 고유공간 = \\[\\operatorname{Col}(X)\\], \\[\\lambda = 0\\] 고유공간 = \\[\\operatorname{Col}(X)^{\\perp}\\] \\[\\operatorname{rank}(P) = \\operatorname{trace}(P) = \\dim \\operatorname{Col}(X) = r\\]"
+  },
+  {
+    "objectID": "posts/2025-08-10-이론-projection.html#svd-관점의-투영",
+    "href": "posts/2025-08-10-이론-projection.html#svd-관점의-투영",
+    "title": "Projection",
+    "section": "SVD 관점의 투영",
+    "text": "SVD 관점의 투영\n\\[X = U\\Sigma V^T\\] (\\[\\Sigma = \\operatorname{diag}(\\sigma_1,\\dots,\\sigma_r,0,\\dots)\\])라 하면 \\[\nP = U_r U_r^T\n\\] 여기서 \\[U_r\\]은 양의 특이값에 대응하는 좌측 특이벡터들."
+  },
+  {
+    "objectID": "posts/2025-08-10-이론-projection.html#가중-내적-하의-일반화",
+    "href": "posts/2025-08-10-이론-projection.html#가중-내적-하의-일반화",
+    "title": "Projection",
+    "section": "가중 내적 하의 일반화",
+    "text": "가중 내적 하의 일반화\n오차 공분산 \\[\\Sigma \\succ 0\\]일 때, \\[W = \\Sigma^{-1}\\]에 대해 \\[\nP_W = X(X^T W X)^{-1} X^T W, \\quad X^T W e = 0\n\\]"
+  },
+  {
+    "objectID": "posts/2025-08-10-이론-projection.html#예제-1-가역-x",
+    "href": "posts/2025-08-10-이론-projection.html#예제-1-가역-x",
+    "title": "Projection",
+    "section": "예제 1: 가역 \\[X\\]",
+    "text": "예제 1: 가역 \\[X\\]\n\\[\nX = \\begin{bmatrix}1 & 1 \\\\ 1 & -1\\end{bmatrix}, \\quad X^T X = 2I \\Rightarrow P = I,\\ M = 0\n\\]"
+  },
+  {
+    "objectID": "posts/2025-08-10-이론-projection.html#예제-2-비가역-x",
+    "href": "posts/2025-08-10-이론-projection.html#예제-2-비가역-x",
+    "title": "Projection",
+    "section": "예제 2: 비가역 \\[X\\]",
+    "text": "예제 2: 비가역 \\[X\\]\n\\[\nX = \\begin{bmatrix}1 & 0 & 1 & 0 & 2 \\\\ 0 & 1 & 0 & 1 & -1 \\\\ 0 & 0 & 0 & 0 & 0 \\end{bmatrix}, \\quad \\operatorname{rank}(X) = 2\n\\] \\[\\operatorname{Col}(X) = \\{(x,y,0)^T\\}\\], \\[y = [1,2,3]^T \\Rightarrow \\hat{y} = [1,2,0]^T,\\ e = [0,0,3]^T,\\ X^T e = 0\\]"
+  },
+  {
+    "objectID": "posts/2025-08-10-이론-projection.html#l2-기준-vs-다른-손실",
+    "href": "posts/2025-08-10-이론-projection.html#l2-기준-vs-다른-손실",
+    "title": "Projection",
+    "section": "L2 기준 vs 다른 손실",
+    "text": "L2 기준 vs 다른 손실\n\nL2: 직교정사영, \\[X^T e = 0\\]\n가중 L2: 가중 직교, \\[X^T W e = 0\\]\nRidge: \\[S_\\lambda\\] 대칭이지만 멱등 아님, \\[X^T e = \\lambda \\hat{\\beta}\\]\nL1/Lasso/Huber: 일반적으로 직교 해석 불가"
+  },
+  {
+    "objectID": "posts/2025-08-10-이론-projection.html#한-줄-요약",
+    "href": "posts/2025-08-10-이론-projection.html#한-줄-요약",
+    "title": "Projection",
+    "section": "한 줄 요약",
+    "text": "한 줄 요약\n투영은 설명 가능/불가능 공간을 나누는 대칭·멱등 연산이며, 고유값 1의 부분공간이 모델이 표현 가능한 방향이다. SVD에서는 좌측 특이벡터 \\[U_r\\]가 “설명 가능한 축”을 결정한다."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Welcome\n여긴 수학/통계/ML 정리와 프로젝트를 모아두는 포트폴리오 공간입니다.\n\n글 목록은 Posts에서 확인 가능\n코드/수식은 R, Python 모두 지원\n깃허브 저장소와 연결되어 재현 가능한 분석을 지향\n\n\n사이트는 Quarto + GitHub Pages로 빌드됩니다."
+    "text": "안녕하세요 박태준입니다. 제가 관심있는 수학/통계/ML분야 정리를 올려놓는 공간입니다.\n\nKeywords:\n제 소개는 About에서 확인 가능, 게시글은 Posts에서 확인 가능"
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Home",
+    "section": "",
+    "text": "안녕하세요 박태준입니다. 제가 관심있는 수학/통계/ML분야 정리를 올려놓는 공간입니다.\n\nKeywords:\n제 소개는 About에서 확인 가능, 게시글은 Posts에서 확인 가능"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Home",
+    "section": "🌏 Contact",
+    "text": "🌏 Contact\n\nEmail: qkr4264@naver.com\nGithub Link: https://github.com/parktj4264\nLinkedin Link: www.linkedin.com/in/태준-박-884176240"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "삼성전자 메모리사업부 · 데이터 분석/ML\n관심사: Bayesian SPC, Interpretable ML, 제조 데이터 분석\n학력: 수학/통계\n\n\n\n\nGitHub: https://github.com/parktj4264\nEmail: qkr4264@naver.com"
+    "text": "삼성전자 메모리사업부 ML/데이터분석\n안녕하세요~"
   },
   {
-    "objectID": "about.html#taejun-park",
-    "href": "about.html#taejun-park",
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
     "title": "About",
     "section": "",
-    "text": "삼성전자 메모리사업부 · 데이터 분석/ML\n관심사: Bayesian SPC, Interpretable ML, 제조 데이터 분석\n학력: 수학/통계\n\n\n\n\nGitHub: https://github.com/parktj4264\nEmail: qkr4264@naver.com"
+    "text": "삼성전자 메모리사업부 ML/데이터분석\n안녕하세요~"
   },
   {
-    "objectID": "posts/2025-08-10-bayesian-spc.html",
-    "href": "posts/2025-08-10-bayesian-spc.html",
-    "title": "Bayesian SPC: 베이지안 품질관리 개요",
-    "section": "",
-    "text": "수식은 LaTeX로 표기합니다:\n\\[\np(\\theta \\mid y) \\propto p(y \\mid \\theta) p(\\theta).\n\\]\n\nimport numpy as np\nnp.random.seed(0)\ndata = np.random.normal(0, 1, 10)\nfloat(np.mean(data))\n\n0.7380231707288347\n\n\n\nset.seed(1)\nmean(rnorm(10))\n\n[1] 0.1322028"
+    "objectID": "about.html#resume",
+    "href": "about.html#resume",
+    "title": "About",
+    "section": "📄 Resume",
+    "text": "📄 Resume\n\nExperience\n\nSamsung Electronics, 메모리사업부 ML/데이터분석 (2024–현재)\nAITRICS, AI Researcher (2023.11-2024.02)\nThe Bouston Consulting Group, (2022.05-2022.06)"
   },
   {
-    "objectID": "posts/2025-08-10-bayesian-spc.html#posterior",
-    "href": "posts/2025-08-10-bayesian-spc.html#posterior",
-    "title": "Bayesian SPC: 베이지안 품질관리 개요",
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\n\nSeoul National University, M.S. in Spatial Statistics (2021.03-2023.08)\nKyunghee University, B.S. in Mathematics (2015.03-2021.02)"
+  },
+  {
+    "objectID": "posts/2025-08-10-생각정리_1.html",
+    "href": "posts/2025-08-10-생각정리_1.html",
+    "title": "생각정리",
     "section": "",
-    "text": "수식은 LaTeX로 표기합니다:\n\\[\np(\\theta \\mid y) \\propto p(y \\mid \\theta) p(\\theta).\n\\]\n\nimport numpy as np\nnp.random.seed(0)\ndata = np.random.normal(0, 1, 10)\nfloat(np.mean(data))\n\n0.7380231707288347\n\n\n\nset.seed(1)\nmean(rnorm(10))\n\n[1] 0.1322028"
+    "text": "카테고리는 다음과 같이…\n\n이론\n코딩\n논문리뷰\n삽질기록\n실험정리\n읽은책/논문"
   },
   {
     "objectID": "posts/index.html",
     "href": "posts/index.html",
     "title": "Posts",
     "section": "",
-    "text": "연구/정리 글 모음.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian SPC: 베이지안 품질관리 개요\n\n\n\nstatistics\n\nbayesian\n\n\n\n공정 데이터에서 불확실성까지 다루는 품질관리 프레임\n\n\n\n\n\nAug 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure Theory 입문\n\n\n\nmath\n\nprobability\n\n\n\nσ-대수, 측도, 적분의 뼈대\n\n\n\n\n\nAug 11, 2025\n\n\n\n\n\nNo matching items"
+    "text": "연구/정리 글 모음.\n\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n생각정리\n\n\n\n기록\n\n\n\n이 블로그를 어떻게 활용할지\n\n\n\n\n\nAug 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nProjection\n\n\n\n이론\n\n\n\n선형회귀/통계에서 핵심이 되는 투영(Projection) 개념을 선형대수 관점에서 정리vvv\n\n\n\n\n\nAug 10, 2025\n\n\n\n\n\nNo matching items"
   }
 ]
