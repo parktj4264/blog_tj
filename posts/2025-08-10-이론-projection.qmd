@@ -1,0 +1,81 @@
+---
+title: "Projection"
+date: 2025-08-10
+description: "선형회귀/통계에서 핵심이 되는 **투영(Projection)** 개념을 선형대수 관점에서 정리vvv"
+categories: [이론]
+tags: [Statistics, Mathmatics, Linear_Algebra]
+# image: assets/img/bayes-spc.png      # 카드 썸네일(없으면 지워도 됨)
+format:
+  html:
+    toc: true
+---
+
+## 개요
+이 문서는 선형회귀/통계에서 핵심이 되는 **투영(Projection)** 개념을 선형대수 관점에서 정리한다. 설계행렬 $$X$$가 만드는 열공간(모형이 표현할 수 있는 부분)과 그 직교보완(잔차공간), 그리고 투영행렬 $$P$$와 잔차행렬 $$M = I - P$$의 스펙트럼(고유값) 구조를 다룬다.
+
+## 표기
+- $$X \in \mathbb{R}^{n \times p}$$: 설계행렬, $$\operatorname{rank}(X) = r$$
+- $$\operatorname{Col}(X)$$: $$X$$의 열공간
+- $$P = X(X^T X)^{-1}X^T$$ ($$X$$ 풀열랭크 가정) 또는 일반적으로 $$P = X X^+$$ (Moore–Penrose 유사역행렬)
+- $$M = I - P$$
+- $$\hat{y} = Py$$, $$e = (I - P)y$$
+
+**설명된 부분**: $$\hat{y} \in \operatorname{Col}(X)$$
+**설명되지 않은 부분**: $$e \in \operatorname{Col}(X)^{\perp}$$
+
+## 직교분해 정리
+모든 $$y \in \mathbb{R}^n$$는 유일하게
+$$
+y = Py + (I - P)y = \hat{y} + e, \quad \hat{y} \in \operatorname{Col}(X),\ e \in \operatorname{Col}(X)^{\perp}
+$$
+로 분해되고,
+$$
+X^T e = 0
+$$
+(정규방정식)이며, 이는
+$$
+\min_{\beta} \|y - X\beta\|_2^2
+$$
+의 필요충분조건이다.
+
+## 투영행렬의 성질 (대칭·멱등)
+- $$P^T = P,\ P^2 = P$$
+- $$M = I - P$$ 역시 대칭·멱등, $$PM = MP = 0$$
+
+**스펙트럼 구조**: 대칭·멱등이면 모든 고유값은 0 또는 1.
+$$\lambda = 1$$ 고유공간 = $$\operatorname{Col}(X)$$,  $$\lambda = 0$$ 고유공간 = $$\operatorname{Col}(X)^{\perp}$$
+$$\operatorname{rank}(P) = \operatorname{trace}(P) = \dim \operatorname{Col}(X) = r$$
+
+## SVD 관점의 투영
+$$X = U\Sigma V^T$$ ($$\Sigma = \operatorname{diag}(\sigma_1,\dots,\sigma_r,0,\dots)$$)라 하면
+$$
+P = U_r U_r^T
+$$
+여기서 $$U_r$$은 양의 특이값에 대응하는 좌측 특이벡터들.
+
+## 가중 내적 하의 일반화
+오차 공분산 $$\Sigma \succ 0$$일 때, $$W = \Sigma^{-1}$$에 대해
+$$
+P_W = X(X^T W X)^{-1} X^T W, \quad X^T W e = 0
+$$
+
+## 예제 1: 가역 $$X$$
+$$
+X = \begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix}, \quad X^T X = 2I \Rightarrow P = I,\ M = 0
+$$
+
+## 예제 2: 비가역 $$X$$
+$$
+X = \begin{bmatrix}1 & 0 & 1 & 0 & 2 \\ 0 & 1 & 0 & 1 & -1 \\ 0 & 0 & 0 & 0 & 0 \end{bmatrix}, \quad \operatorname{rank}(X) = 2
+$$
+$$\operatorname{Col}(X) = \{(x,y,0)^T\}$$,
+$$y = [1,2,3]^T \Rightarrow \hat{y} = [1,2,0]^T,\ e = [0,0,3]^T,\ X^T e = 0$$
+
+## L2 기준 vs 다른 손실
+- **L2**: 직교정사영, $$X^T e = 0$$
+- **가중 L2**: 가중 직교, $$X^T W e = 0$$
+- **Ridge**: $$S_\lambda$$ 대칭이지만 멱등 아님, $$X^T e = \lambda \hat{\beta}$$
+- **L1/Lasso/Huber**: 일반적으로 직교 해석 불가
+
+## 한 줄 요약
+투영은 **설명 가능/불가능** 공간을 나누는 대칭·멱등 연산이며, 고유값 1의 부분공간이 모델이 표현 가능한 방향이다. SVD에서는 좌측 특이벡터 $$U_r$$가 "설명 가능한 축"을 결정한다.

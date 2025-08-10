@@ -2,12 +2,20 @@
 title: "About"
 ---
 
-## Taejun Park
+## 👋 About Me
+- 삼성전자 메모리사업부 ML/데이터분석
+- 안녕하세요~
 
-- 삼성전자 메모리사업부 · 데이터 분석/ML
-- 관심사: Bayesian SPC, Interpretable ML, 제조 데이터 분석
-- 학력: 수학/통계
 
-### Contact
-- GitHub: <https://github.com/parktj4264>
-- Email: qkr4264@naver.com
+<br>
+
+## 📄 Resume
+
+### Experience
+- **Samsung Electronics**, 메모리사업부 ML/데이터분석 *(2024–현재)*
+- **AITRICS**, AI Researcher *(2023.11-2024.02)*
+- **The Bouston Consulting Group**, *(2022.05-2022.06)*
+
+## Education
+- **Seoul National University**, M.S. in Spatial Statistics *(2021.03-2023.08)*
+- **Kyunghee University**, B.S. in Mathematics *(2015.03-2021.02)*

@@ -1,0 +1,20 @@
+---
+title: "생각정리"
+date: 2025-08-10
+description: "이 블로그를 어떻게 활용할지"
+categories: [기록]
+tags: [기록]
+# image: assets/img/bayes-spc.png      # 카드 썸네일(없으면 지워도 됨)
+format:
+  html:
+    toc: true
+---
+
+카테고리는 다음과 같이...
+
+- 이론
+- 코딩
+- 논문리뷰
+- 삽질기록
+- 실험정리
+- 읽은책/논문

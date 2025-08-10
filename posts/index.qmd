@@ -5,6 +5,7 @@ listing:
   sort: "date desc"
   type: default   # 기본형
   categories: true
+  filter-ui: true
 ---
 
 

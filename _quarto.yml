@@ -2,21 +2,19 @@ project:
   type: website
 
 website:
-  title: "Taejun Park · Statistics & ML"
+  title: "Taejun Park · Math/Statistics/ML"
   site-url: "https://parktj4264.github.io/blog_tj"
-  description: "통계·AI·ML 연구노트 & 포트폴리오"
+  description: "수학·통계·ML 노트"
   # favicon: assets/img/favicon.png
   navbar:
     # logo: assets/img/logo.svg
     left:
       - text: "Home"
         href: index.qmd
-      - text: "Posts"
-        href: posts/
       - text: "About"
         href: about.qmd
-      - text: "Resume"
-        href: resume.qmd
+      - text: "Posts"
+        href: posts/
     right:
       - icon: github
         href: "https://github.com/parktj4264/blog_tj"
