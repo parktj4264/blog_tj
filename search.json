@@ -28,11 +28,18 @@
     "text": "Education\n\nBSc Mathematics, MSc Spatial Statistics\n\n\nPDF 이력서도 함께 배포하려면 format: pdf로 렌더 옵션을 추가하세요."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
+    "objectID": "posts/2025-08-10-bayesian-spc.html",
+    "href": "posts/2025-08-10-bayesian-spc.html",
+    "title": "Bayesian SPC: 베이지안 품질관리 개요",
     "section": "",
-    "text": "Welcome\n여긴 수학/통계/ML 정리와 프로젝트를 모아두는 포트폴리오 공간입니다.\n\n글 목록은 Posts에서 확인 가능\n코드/수식은 R, Python 모두 지원\n깃허브 저장소와 연결되어 재현 가능한 분석을 지향\n\n\n사이트는 Quarto + GitHub Pages로 빌드됩니다."
+    "text": "수식은 LaTeX로 표기합니다:\n\\[\np(\\theta \\mid y) \\propto p(y \\mid \\theta) p(\\theta).\n\\]\n\nimport numpy as np\nnp.random.seed(0)\ndata = np.random.normal(0, 1, 10)\nfloat(np.mean(data))\n\n0.7380231707288347\n\n\n\nset.seed(1)\nmean(rnorm(10))\n\n[1] 0.1322028"
+  },
+  {
+    "objectID": "posts/2025-08-10-bayesian-spc.html#posterior",
+    "href": "posts/2025-08-10-bayesian-spc.html#posterior",
+    "title": "Bayesian SPC: 베이지안 품질관리 개요",
+    "section": "",
+    "text": "수식은 LaTeX로 표기합니다:\n\\[\np(\\theta \\mid y) \\propto p(y \\mid \\theta) p(\\theta).\n\\]\n\nimport numpy as np\nnp.random.seed(0)\ndata = np.random.normal(0, 1, 10)\nfloat(np.mean(data))\n\n0.7380231707288347\n\n\n\nset.seed(1)\nmean(rnorm(10))\n\n[1] 0.1322028"
   },
   {
     "objectID": "about.html",
@@ -49,17 +56,17 @@
     "text": "삼성전자 메모리사업부 · 데이터 분석/ML\n관심사: Bayesian SPC, Interpretable ML, 제조 데이터 분석\n학력: 수학/통계\n\n\n\n\nGitHub: https://github.com/USERNAME\nEmail: you@example.com"
   },
   {
-    "objectID": "posts/2025-08-10-bayesian-spc.html",
-    "href": "posts/2025-08-10-bayesian-spc.html",
-    "title": "Bayesian SPC: 베이지안 품질관리 개요",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
     "section": "",
-    "text": "수식은 LaTeX로 표기:\n\\[\np(\\theta \\mid y) \\propto p(y \\mid \\theta) p(\\theta).\n\\]\n\nimport numpy as np\nnp.random.seed(0)\ndata = np.random.normal(0, 1, 10)\nfloat(np.mean(data))\n\n0.7380231707288347\n\n\n\nset.seed(1)\nmean(rnorm(10))\n\n[1] 0.1322028"
+    "text": "Welcome\n여긴 수학/통계/ML 정리와 프로젝트를 모아두는 포트폴리오 공간입니다.\n\n글 목록은 Posts에서 확인 가능\n코드/수식은 R, Python 모두 지원\n깃허브 저장소와 연결되어 재현 가능한 분석을 지향\n\n\n사이트는 Quarto + GitHub Pages로 빌드됩니다."
   },
   {
-    "objectID": "posts/2025-08-10-bayesian-spc.html#posterior",
-    "href": "posts/2025-08-10-bayesian-spc.html#posterior",
-    "title": "Bayesian SPC: 베이지안 품질관리 개요",
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Posts",
     "section": "",
-    "text": "수식은 LaTeX로 표기:\n\\[\np(\\theta \\mid y) \\propto p(y \\mid \\theta) p(\\theta).\n\\]\n\nimport numpy as np\nnp.random.seed(0)\ndata = np.random.normal(0, 1, 10)\nfloat(np.mean(data))\n\n0.7380231707288347\n\n\n\nset.seed(1)\nmean(rnorm(10))\n\n[1] 0.1322028"
+    "text": "여기는 글 모음 페이지입니다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian SPC: 베이지안 품질관리 개요\n\n\n\nbayesian\n\nspc\n\nmanufacturing\n\n\n\n\n\n\n\n\n\nAug 10, 2025\n\n\n\n\n\nNo matching items"
   }
 ]
